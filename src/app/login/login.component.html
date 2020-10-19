@@ -1,0 +1,56 @@
+<!-- <form #loginForm="ngForm" class="col s12 white">
+  <div class="row">
+    <div class="input-field col s12">
+      <i class="material-icons prefix">
+        account_circle
+      </i>
+      <input type="text" name="userName" #userName ngModel placeholder="UserName">
+    </div>
+  </div>
+  <div class="row">
+    <div class="input-field col s12">
+      <i class="material-icons prefix">
+        vpn_key
+      </i>
+      <input type="password" name="password" #password ngModel placeholder="Password">
+    </div>
+  </div>
+  <div class="row">
+    <div class="input-field col s12">
+     <button class="btn-large btn-submit" type="submit">Login</button>
+    </div>
+  </div>
+</form> -->
+ 
+<h2 mat-dialog-title>Edit Details</h2>
+
+<mat-dialog-content [formGroup]="editForm">
+  
+    <mat-form-field>
+        <input matInput
+                placeholder="id"
+               formControlName="id">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput
+              placeholder="firstname"
+             formControlName="firstname">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput
+            placeholder="lastname"
+           formControlName="lastname">
+</mat-form-field>
+<mat-form-field>
+  <input matInput
+          placeholder="email"
+         formControlName="email">
+</mat-form-field>
+      
+ 
+</mat-dialog-content>
+
+<mat-dialog-actions>
+    <button class="mat-raised-button"(click)="close()">Close</button>
+    <button class="mat-raised-button mat-primary"(click)="save()">Save</button>
+</mat-dialog-actions>
